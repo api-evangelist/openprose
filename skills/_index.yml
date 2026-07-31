@@ -1,0 +1,16 @@
+generated: '2026-07-20'
+method: searched
+source: https://raw.githubusercontent.com/openprose/prose/1542e62410fec9b0f1d937dec7e1d378ec61247b/skills/open-prose/SKILL.md
+skills:
+- file: openprose-open-prose.md
+  name: open-prose
+  version: 0.15.0
+  runtime_contract: 2
+  description: >-
+    Provider-published Agent Skill (verbatim SKILL.md). Activates when the user
+    types `prose ...`, opens a `.prose.md`/`.prose` file with `kind:` frontmatter,
+    or asks for reusable multi-agent orchestration; the agent embodies the OpenProse
+    VM in-session (reads the Markdown contract, selects a state backend, wires
+    responsibilities via Forme, executes with host primitives, persists run state).
+  license: MIT
+  homepage: https://prose.md/

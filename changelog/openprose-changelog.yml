@@ -1,0 +1,48 @@
+generated: '2026-07-20'
+method: searched
+source: https://github.com/openprose/prose/blob/main/CHANGELOG.md
+scheme: semver
+format: keep-a-changelog
+current_version: 0.15.0
+entries:
+- version: Unreleased
+  highlights:
+  - '`prose react "<use case>"`: take an English standing goal to a running, inspectable Reactor on the `reactor` binary.'
+  - '`model.reasoning_effort` (reactor.yml) / `reasoningEffort` (SDK) passed into modelSettings.reasoning.effort.'
+  - Failed renders now record and surface why they failed; secrets scrubbed before storage.
+  - '`reactor serve` reports per-gateway poll activity in its heartbeat.'
+  changed:
+  - Unset `temperature` is now omitted from model requests instead of silently becoming 0 (for OpenAI reasoning models).
+- version: 0.15.0
+  date: '2026-06-04'
+  title: open-prose skill & plugin
+  breaking: true
+  changed:
+  - 'Intelligent React overhaul (runtime_contract 1 -> 2): judge/verdict/pressure/fulfillment loop retired for a deterministic reconciler; each commit is a Receipt (rendered | skipped | failed) with no LLM in the wake/commit decision.'
+  - 'Kind taxonomy re-cleaved: kind: service -> kind: function, kind: system removed, kind: responsibility reshaped with ### Requires / ### Maintains, ### Ensures -> ### Maintains.'
+  - Decoupled version tracks (skill vs cli).
+- version: 0.14.0
+  date: '2026-05-19'
+  additions:
+  - '`prose write` authoring workflow (std/ops/prose-author) for turning rough English/pseudo-Prose into a validated OpenProse source package.'
+  - Shape-aware authoring guidance.
+  - 'Declared `### Skills` section (namespace:name colon form).'
+  - 'Declared `### Tools` section (cli:<name> host executables).'
+  fixed:
+  - Serve shutdown logging, status wording, compiler discipline, smoke postconditions, dependency audit.
+- version: 0.13.1
+  date: '2026-05-05'
+- version: 0.13.0
+  date: '2026-05-04'
+- version: 0.12.0
+  date: '2026-05-04'
+- version: 0.11.0
+  date: '2026-05-01'
+- version: 0.10.0
+  date: '2026-04-20'
+- version: 0.9.0
+  date: '2026-03-23'
+- version: 0.8.1
+  date: '2025-01-23'
+- version: 0.8.0
+  date: '2025-01-23'

@@ -1,0 +1,52 @@
+generated: '2026-07-20'
+method: searched
+source: https://github.com/openprose/prose/blob/main/CHANGELOG.md, https://prose.md/llms.txt, https://docs.prose.md/
+clis:
+- name: prose
+  package: "@openprose/prose-cli"
+  install: npm install -g @openprose/prose-cli
+  description: >-
+    Runs OpenProse commands through first-party Codex and Claude agent SDKs.
+    Note: `prose run ...` is an in-session instruction embodied by the open-prose
+    skill (the agent embodies the OpenProse VM; there is no standalone `prose`
+    binary parser) — the CLI wrapper is non-interactive and forwards argv/stdin.
+  commands:
+  - name: init
+    summary: Initialize an OpenProse root / project scaffold.
+  - name: doctor
+    summary: Environment/health check for onboarding.
+  - name: compile
+    summary: Compile a contract set into the topology DAG (writes manifest).
+  - name: serve
+    summary: Serve / run responsibilities continuously.
+  - name: run
+    summary: Execute a .prose.md responsibility or function (embodied in-session).
+  - name: write
+    summary: Turn rough English or pseudo-Prose into a validated OpenProse source package.
+  - name: react
+    summary: Take an English standing goal to a running, inspectable Reactor (--start drives the live lifecycle).
+  - name: status
+    summary: Report runtime status of responsibilities.
+  - name: upgrade
+    summary: Rewrite sources to migrate retired vocabulary across runtime-contract versions.
+- name: reactor
+  package: "@openprose/reactor-cli"
+  install: npm install -g @openprose/reactor-cli
+  description: >-
+    Deterministic command-line driver for the @openprose/reactor SDK. Unlike the
+    embodied `prose run`, `reactor` is a deterministic host the agent shells out to.
+  commands:
+  - name: compile
+    summary: Compile a .prose project into a content-addressed topology DAG.
+  - name: run
+    summary: Run the compiled reactor; renders only when material inputs move.
+  - name: serve
+    summary: Long-running serve loop with per-gateway poll heartbeat.
+  - name: trigger
+    summary: Manually trigger a render.
+  - name: logs
+    summary: Show render logs (including failure reasons).
+  - name: trace
+    summary: Show the receipt/trace ledger for a node.
+  - name: inspect
+    summary: Inspect node/world-model state.

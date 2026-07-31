@@ -1,0 +1,50 @@
+generated: '2026-07-20'
+method: searched
+source: https://www.npmjs.com/org/openprose (npm registry search text=@openprose)
+packages:
+- language: javascript
+  registry: npm
+  name: "@openprose/reactor"
+  version: 0.3.1
+  license: MIT
+  url: https://www.npmjs.com/package/@openprose/reactor
+  repository: https://github.com/openprose/prose
+  install: npm install @openprose/reactor
+  description: >-
+    OpenProse Reactor runtime (SDK): deterministic harness for OpenProse
+    contracts; fresh model spend scales with surprise, not the clock.
+  official: true
+- language: javascript
+  registry: npm
+  name: "@openprose/reactor-cli"
+  version: 0.2.2
+  license: MIT
+  url: https://www.npmjs.com/package/@openprose/reactor-cli
+  repository: https://github.com/openprose/prose
+  install: npm install -g @openprose/reactor-cli
+  binary: reactor
+  description: Deterministic command-line driver for the @openprose/reactor SDK.
+  official: true
+- language: javascript
+  registry: npm
+  name: "@openprose/prose-cli"
+  version: 0.14.0
+  license: MIT
+  url: https://www.npmjs.com/package/@openprose/prose-cli
+  repository: https://github.com/openprose/prose
+  install: npm install -g @openprose/prose-cli
+  binary: prose
+  description: Run OpenProse commands through first-party Codex and Claude agent SDKs.
+  official: true
+- language: javascript
+  registry: npm
+  name: "@openprose/reactor-devtools"
+  version: 0.2.0
+  license: MIT
+  url: https://www.npmjs.com/package/@openprose/reactor-devtools
+  repository: https://github.com/openprose/prose
+  install: npm install @openprose/reactor-devtools
+  description: >-
+    DevTools / visualization for the @openprose/reactor harness: replays a
+    saved recording.
+  official: true

@@ -1,0 +1,30 @@
+generated: '2026-07-20'
+method: searched
+source: live probes of /.well-known/ and agent-discovery paths
+hosts:
+- host: https://prose.md
+  documents:
+  - path: /llms.txt
+    status: 200
+    file: ../llms/openprose-llms.txt
+  - path: /llms-full.txt
+    status: 200
+    note: >-
+      Full verbatim docs dump exists but is intentionally not committed
+      (gitignored *-llms-full.txt) to avoid embedded vendor example tokens.
+  - path: /agent-onboarding.md
+    status: 200
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /.well-known/ai-plugin.json
+    status: 404
+  - path: /.well-known/openid-configuration
+    status: 404
+- host: https://docs.prose.md
+  documents:
+  - path: /llms.txt
+    status: 200
+- host: https://openprose.ai
+  documents:
+  - path: /.well-known/security.txt
+    status: 404

@@ -1,0 +1,31 @@
+generated: '2026-07-20'
+method: searched
+source: https://github.com/openprose/prose/blob/main/CHANGELOG.md, https://prose.md/llms.txt
+versioning:
+  scheme: semver
+  standard: https://semver.org/spec/v2.0.0.html
+  changelog_format: keep-a-changelog
+  current:
+    skill: 0.15.0
+    runtime_contract: 2
+    reactor_sdk: 0.3.1
+    prose_cli: 0.14.0
+  notes: >-
+    Version surfaces are grouped into independent release tracks (`.version-bump.json`):
+    the `skill` track (SKILL.md + Claude/Codex plugin manifests, locked together for
+    marketplace dedup) and the `cli` track (@openprose/prose-cli + installer). The
+    skill can release without a CLI bump.
+deprecation:
+  policy_url: null
+  sunset_header: false
+  retired_vocabulary:
+    - "kind: service (now kind: function)"
+    - "kind: system (removed)"
+    - "### Ensures (now ### Maintains)"
+  migration: >-
+    The runtime_contract 1 -> 2 change retired earlier vocabulary; migration is
+    handled by `prose upgrade` rewrites documented in skills/open-prose/changelog.md.
+sla:
+  url: null
+status_page: null
+deprecated_operations: []

@@ -1,0 +1,58 @@
+# OpenProse
+
+> OpenProse is a programming language for standing AI jobs, declared as
+> durable Markdown contracts (`*.prose.md` files). You declare what should
+> stay true; the system works out how much model work it takes to keep it
+> true. The language ships as an agent skill and runs on any compliant agent
+> host, such as Claude Code, Codex, or OpenCode. Reactor is the deterministic
+> harness that runs the contracts: cost scales with surprise, not the clock.
+
+Important notes:
+
+- Contract kinds are `responsibility`, `function`, `gateway`, `pattern`, and
+  `test`. A responsibility declares `### Goal`, `### Requires`,
+  `### Maintains`, and `### Continuity`; a function declares
+  `### Parameters` and `### Returns`.
+- Reactor's reconciler is deterministic: it compares fingerprints and skips
+  the render when nothing material moved. No model call decides a wake or a
+  commit, and every render leaves a content-addressed receipt.
+- Current release: skill 0.15.0, runtime contract 2. The
+  GitHub links below are pinned to that release's commit. Earlier releases
+  used vocabulary that is now retired: `service`, `system`, and
+  `### Ensures` (now `### Maintains`).
+- No benchmarks are published. The cost property (an unmoved fingerprint
+  skips the render at zero token cost) is a tested invariant, not a measured
+  speedup.
+
+## Agent Onboarding
+
+- [Arrival narrative (markdown)](https://prose.md/agent-onboarding.md): one-screen onboarding covering what OpenProse is, the install command, and what happens when the skill activates. Start here.
+- [SKILL.md](https://raw.githubusercontent.com/openprose/prose/1542e62410fec9b0f1d937dec7e1d378ec61247b/skills/open-prose/SKILL.md): the skill entrypoint loaded on activation.
+
+## Language Reference
+
+- [Contract Markdown](https://raw.githubusercontent.com/openprose/prose/1542e62410fec9b0f1d937dec7e1d378ec61247b/skills/open-prose/contract-markdown.md): the `*.prose.md` source format: frontmatter, the five kinds, and the load-bearing sections.
+- [Prose VM](https://raw.githubusercontent.com/openprose/prose/1542e62410fec9b0f1d937dec7e1d378ec61247b/skills/open-prose/prose.md): execution reference for embodied `prose run` sessions.
+- [ProseScript](https://raw.githubusercontent.com/openprose/prose/1542e62410fec9b0f1d937dec7e1d378ec61247b/skills/open-prose/prosescript.md): the imperative layer for `### Execution` blocks and pattern delegation.
+- [Forme](https://raw.githubusercontent.com/openprose/prose/1542e62410fec9b0f1d937dec7e1d378ec61247b/skills/open-prose/forme.md): compile-phase wiring that matches `### Requires` facets to `### Maintains` facets across nodes and emits the topology DAG.
+- [Responsibility Runtime](https://raw.githubusercontent.com/openprose/prose/1542e62410fec9b0f1d937dec7e1d378ec61247b/skills/open-prose/responsibility-runtime.md): the standing-goal doctrine: responsibilities, the reconciler, compile and serve.
+- [Design tenets](https://raw.githubusercontent.com/openprose/prose/1542e62410fec9b0f1d937dec7e1d378ec61247b/skills/open-prose/guidance/tenets.md): the principles the language is optimized for, in precedence order.
+
+## Specification
+
+- [Language spec](https://raw.githubusercontent.com/openprose/prose/1542e62410fec9b0f1d937dec7e1d378ec61247b/spec/01-Language.md): the normative spec for kinds, sections, facets, fingerprints, and receipts.
+- [Reactor harness spec](https://raw.githubusercontent.com/openprose/prose/1542e62410fec9b0f1d937dec7e1d378ec61247b/spec/02-ReactorHarness.md): the run-phase contract: reconciler, world-model store, and the receipt ledger.
+
+## Reactor
+
+- [Reactor README](https://raw.githubusercontent.com/openprose/prose/1542e62410fec9b0f1d937dec7e1d378ec61247b/packages/reactor/README.md): the deterministic harness that runs OpenProse contracts. Ships as `@openprose/reactor` (SDK) and `@openprose/reactor-cli` (the `reactor` binary).
+
+## Talk to us
+
+- Email [support@agents.openprose.ai](mailto:support@agents.openprose.ai): automated, docs-grounded replies to OpenProse questions. Or from any agent CLI: `npx skills add primitivedotdev/chat`, then `primitive chat support@agents.openprose.ai "<question>"`.
+
+## Optional
+
+- [Examples](https://github.com/openprose/prose/tree/1542e62410fec9b0f1d937dec7e1d378ec61247b/skills/open-prose/examples): annotated `*.prose.md` sources.
+- [Docs](https://docs.prose.md/start/what-is-openprose): the human-facing docs entrypoint.
+- [Docs agent corpus](https://docs.prose.md/llms.txt): the docs site's own llms.txt.

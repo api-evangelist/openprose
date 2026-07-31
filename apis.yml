@@ -1,22 +1,95 @@
 aid: openprose
 name: Openprose
-description: Openprose is a company surfaced as a portfolio company of y-combinator and added to the API
-  Evangelist network as a stub for enrichment. This profile is a lead awaiting the enrichment pipeline.
+description: >-
+  OpenProse, Inc. builds an open-source (MIT) programming language for AI
+  sessions: standing AI jobs are declared as durable Markdown contracts
+  (`*.prose.md` files) that state what should stay true, and the system works
+  out how much model work it takes to keep it true. The language ships as an
+  agent skill (`open-prose`) that runs on any compliant agent host such as
+  Claude Code, Codex, or OpenCode, and is paired with Reactor — a deterministic
+  harness (`@openprose/reactor` SDK plus the `@openprose/reactor-cli` `reactor`
+  binary) whose model spend scales with surprise, not the clock: a render runs
+  only when a node's subscribed input fingerprints move, and each commit is a
+  content-addressed receipt with no LLM in the wake/commit decision. Contract
+  kinds are responsibility, function, gateway, pattern, and test; Forme is the
+  semantic dependency-injection layer that wires `### Requires` facets to
+  `### Maintains` facets. A Y Combinator company founded in 2026 (San Francisco)
+  with open-source traction; distributed as npm packages rather than a hosted
+  REST API.
 url: https://raw.githubusercontent.com/api-evangelist/openprose/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
 x-backed-by:
 - y-combinator
-x-tier: stub
-x-tier-reason: portfolio-lead
+accessModel:
+  pricing: unknown
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Unknown
+  confidence: low
+  source: []
+  generated: '2026-07-22'
+  method: derived
+image: https://github.com/openprose.png
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-20'
 tags:
 - Company
+- AI Agents
+- Agent Orchestration
+- Developer Tools
+- Open Source
+- Programming Language
+- LLM
+- Workflow Automation
+- Y Combinator
 apis: []
+x-enrichment:
+  date: '2026-07-20'
+  status: enriched
+  artifacts_added: 9
+  pass: local-v1
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+common:
+- type: Website
+  url: https://prose.md/
+- type: DeveloperPortal
+  url: https://prose.md/
+- type: Documentation
+  url: https://docs.prose.md/start/what-is-openprose
+- type: APIReference
+  url: https://docs.prose.md/sdk
+- type: GettingStarted
+  url: https://docs.prose.md/openprose/setup
+- type: GitHubOrganization
+  url: https://github.com/openprose
+- type: Support
+  url: https://github.com/openprose/prose/issues
+- type: ChangeLog
+  url: https://github.com/openprose/prose/blob/main/CHANGELOG.md
+- type: LLMsTxt
+  url: llms/openprose-llms.txt
+- type: Packages
+  url: packages/openprose-packages.yml
+- type: SDKs
+  url: packages/openprose-packages.yml
+- type: CLI
+  url: cli/openprose-cli.yml
+- type: AgentSkill
+  url: skills/openprose-open-prose.md
+- type: Lifecycle
+  url: lifecycle/openprose-lifecycle.yml
+- type: ChangeLog
+  name: OpenProse changelog (structured)
+  url: changelog/openprose-changelog.yml
+- type: WellKnown
+  url: well-known/openprose-well-known.yml
+- type: DomainSecurity
+  url: security/openprose-domain-security.yml
