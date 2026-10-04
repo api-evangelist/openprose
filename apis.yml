@@ -52,10 +52,10 @@ tags:
 - AI Agents
 - Agent Orchestration
 - Developer Tools
-- Open-Source
+- Open Source
 - Programming Language
 - LLM
-- Workflow-Automation
+- Workflow Automation
 - Y Combinator
 tags_raw:
 - Company
@@ -67,6 +67,8 @@ tags_raw:
 - LLM
 - Workflow Automation
 - Y Combinator
+- Open-Source
+- Workflow-Automation
 apis: []
 x-enrichment:
   date: '2026-07-20'
